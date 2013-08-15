@@ -3,8 +3,7 @@
 <h1>Line <%= @line._id %></h1>
 
 <table>
-    <tr>
-    <td><%= @line.name %></td>
-    <td>#<%= @line.color %></td>
-    </tr>
+    <tr><td>Name: <%= @line.name %></td></tr>
+    <tr><td>Color: #<%= @line.color %></td></tr>
+    <tr><td><%= link_to "Stations", line_stations_path(@line) %></td></tr>
 </table>
