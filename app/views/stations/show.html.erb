@@ -1,1 +1,4 @@
 <h1>This station <%=@station.name %>, with id <%=@station.id %>, and belongs to <%= @line.id %> with name <%= @line.name %>.</h1>
+
+<h1>This station <%=@station.name %>, with id <%=@station.id %>, and belongs to <%= @station.line.id %> with name <%= @station.line.name %>.</h1>
+
