@@ -9,7 +9,7 @@ describe 'data routing' do
   end
 
   it 'routes /lines/:id to cats#show' do
-      expect(get: '/lines/34').to route_to(
+    expect(get: '/lines/34').to route_to(
       controller: 'lines',
       action: 'show',
       id: '34'
@@ -17,10 +17,19 @@ describe 'data routing' do
   end
 
   it 'routes /lines/:id/stations to stations#index' do
-      expect(get: '/lines/34/stations').to route_to(
+    expect(get: '/lines/34/stations').to route_to(
       controller: 'stations',
       action: 'index',
       line_id: '34'
+    )
+  end
+
+  it 'routes /lines/:id/stations/:id to stations#show' do
+    expect(get:'/lines/34/station/12').to route_to(
+      controller: 'stations',
+      action: 'show',
+      id: '12',
+      lines_id: '34'
     )
   end
 end
