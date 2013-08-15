@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use Mongoid
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 
 # Use SCSS for stylesheets
@@ -36,7 +35,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
 end
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
