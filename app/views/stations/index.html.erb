@@ -1,6 +1,14 @@
 <h1>List of stations in <%= @line.id %></h1>
-<% @stations.each do |station| %>
-  <p>
-    <%= station.name %>
-  </p>
-<% end %>
+  <table>
+    <tr><td>Name:</td>
+    <td>Link:</td>
+    <td>ID:</td>
+    </tr>
+
+    <% @stations.each do |station| %>
+      <tr><td><%= station.name %></td>
+      <td><%= link_to "Station link", line_station_path(@line, station) %></td>
+      <td><%= station.id %></td>
+     </tr>
+    <% end %>
+  </table>
