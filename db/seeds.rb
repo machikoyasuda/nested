@@ -2,7 +2,11 @@ Line.destroy_all
 
 Line.create!(
   name: 'Red',
-  color: 'F03B20'
+  color: 'F03B20',
+  stations: [
+    Station.new(name: "One"),
+    Station.new(name: "Two")
+  ]
 )
 
 Line.create!(
